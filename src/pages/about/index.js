@@ -1,5 +1,6 @@
-import ValueAbout from '@/components/about/valueAbout';
+import ValueAbout from '@/components/elements/valueAbout';
 import BreadCrumbs from '@/components/breadcrumbs';
+import GradingAbout from '@/components/about/GradingAbout';
 
 export default function AboutPage() {
     return (
@@ -21,7 +22,7 @@ export default function AboutPage() {
                 </h1>
             </header>
             <main className="p-10">
-                <div className="flex w-full mx-auto border-b-4 justify-around pb-[100px]">
+                <div className="flex w-full mx-auto border-b-4 justify-around pb-[250px]">
                     <img
                         className="relative mx-5 shadow-2xl shadow-slate-500 z-2 w-1/4 h-auto"
                         src="/images/about1.jpg"
@@ -46,12 +47,8 @@ export default function AboutPage() {
                     </p>
                 </div>
             </main>
-            <section>
-                <div className="flex flex-row justify-around">
-                    <ValueAbout title={'9+'} />
-                    <ValueAbout title={'8/10'} />
-                    <ValueAbout title={'A'} />
-                </div>
+            <section className="mt-10">
+                <GradingAbout />
             </section>
         </div>
     );

@@ -3,7 +3,7 @@ export default function LogoNavbar() {
     return (
         <div className="logo text-lg flex items-center">
             <LogoPicture />
-            <LogoName />
+            <LogoName span="mx-10" />
         </div>
     );
 }
