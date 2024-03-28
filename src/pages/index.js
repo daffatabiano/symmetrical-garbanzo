@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import FoodLayout from '@/layout/FoodLayout';
+import HomeLayout from '@/layout/HomeLayout';
+import Loading from './loading';
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -23,14 +25,20 @@ export default function Home() {
         getFoods();
     }, []);
 
-    if (loading) return <div>Loading . . .</div>;
+    if (loading)
+        return (
+            <div>
+                <Loading />
+            </div>
+        );
 
     return (
         <FoodLayout>
-            <div className="space-y-8 flex flex-wrap space-x-5 justify-center text-center ">
+            <HomeLayout />
+            <div className="flex flex-wrap bg-yellow-300 my-[710px] justify-between">
                 {data.map((food) => (
-                    <div>
-                        <h1 className="text-xl text-bold my-3">{food.name}</h1>
+                    <div className="w-64 h-64 text-center py-[100px] px-5">
+                        <h1 className="text-xl font-bold my-3">{food.name}</h1>
                         <img
                             src={food.imageUrl}
                             className="w-64 aspect-video"

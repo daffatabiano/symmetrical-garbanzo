@@ -18,13 +18,13 @@ export function LogoPicture() {
     );
 }
 
-export function LogoName({ style }) {
+export function LogoName({ style, span }) {
     return (
         <h1
             className={`logo-name block font-bold ${style} text-3xl text-white w-10 leading-5`}
         >
             Makanan{' '}
-            <span className="text-yellow-500 mx-7 font-['ZCOOL_KuaiLe']">
+            <span className={`text-yellow-500 ${span} font-['ZCOOL_KuaiLe']`}>
                 B<span className="text-[#269faa]">o</span>
                 <span className="text-[#269faa]">0</span>
                 <span className="text-[#ff4b31]">n</span>
