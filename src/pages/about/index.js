@@ -1,8 +1,26 @@
 import ValueAbout from '@/components/elements/valueAbout';
 import BreadCrumbs from '@/components/breadcrumbs';
 import GradingAbout from '@/components/about/GradingAbout';
+import Carousel from '@/components/carousel/Carousel';
+import MainAbout from '@/components/about/MainAbout';
+import Link from 'next/link';
+import SectionAbout from '@/components/about/SectionAbout';
 
 export default function AboutPage() {
+    const images = [
+        {
+            src: '/images/about1.jpg',
+            alt: 'about1',
+        },
+        {
+            src: '/images/about2.jpg',
+            alt: 'about2',
+        },
+        {
+            src: '/images/about3.jpg',
+            alt: 'about3',
+        },
+    ];
     return (
         <div>
             <BreadCrumbs />
@@ -21,34 +39,25 @@ export default function AboutPage() {
                     Us!
                 </h1>
             </header>
-            <main className="p-10">
-                <div className="flex w-full mx-auto border-b-4 justify-around pb-[250px]">
-                    <img
-                        className="relative mx-5 shadow-2xl shadow-slate-500 z-2 w-1/4 h-auto"
-                        src="/images/about1.jpg"
-                        alt=""
-                    />
-                    <img
-                        className="absolute shadow-sm shadow-current w-[330px] my-[150px] ms-[-900px] z-4 w-1/6 h-auto"
-                        src="/images/about2.jpg"
-                        alt=""
-                    />
-                    <p className="ps-7 indent-8 w-2/4 py-3 text-start leading-10">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Recusandae velit blanditiis dolor maiores ab itaque sint
-                        delectus dolorem, fugit accusamus neque animi ex
-                        laudantium aliquam ad natus est soluta commodi? Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus facilis enim odit fugit autem iure excepturi
-                        illum sint magnam, perspiciatis sunt aliquid deserunt
-                        aliquam omnis vero ex temporibus officia totam! Lorem
-                        ipsum dolor, sit amet consectetur adipisicing elit. Quas
-                        laboriosam distinctio repellendus
-                    </p>
-                </div>
-            </main>
+            <MainAbout />
             <section className="mt-10">
                 <GradingAbout />
+            </section>
+            <section className="mt-10">
+                <Carousel images={images} />
+            </section>
+            <section className="flex p-2 mt-10 justify-around">
+                <SectionAbout title={'Since 1996'}
+                    image={"https://th.bing.com/th/id/OIG2.o3j.NwcVMka_QG9JbSug?w=1024&h=1024&rs=1&pid=ImgDetMain"}
+                    button={'Read More →'}>
+                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(38,159,170,0.6)] p-4 rounded-bl-none text-white rounded-3xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ea quam eveniet odit fugiat eum, reiciendis at
+                        architecto voluptatum ipsum voluptate exercitationem
+                        quisquam dolorum explicabo veniam? Doloribus placeat ex
+                        provident perferendis!
+                    </p>
+                </SectionAbout>
             </section>
         </div>
     );
