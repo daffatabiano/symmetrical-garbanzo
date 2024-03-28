@@ -27,7 +27,7 @@ export default function Home() {
 
     return (
         <FoodLayout>
-            <div className="space-y-8 flex flex-wrap space-x-5 justify-center text-center">
+            <div className="space-y-8 flex flex-wrap space-x-5 justify-center text-center ">
                 {data.map((food) => (
                     <div>
                         <h1 className="text-xl text-bold my-3">{food.name}</h1>
