@@ -1,6 +1,6 @@
 import Button from '@/components/button';
 import ArrowButton from '@/components/elements/Arrow';
-import LogoNavbar from '@/components/fragments/logo';
+import LogoNavbar from '@/components/elements/logo';
 
 export default function HomeLayout() {
     return (
