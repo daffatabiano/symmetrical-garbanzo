@@ -8,10 +8,14 @@ import Button from '@/components/button';
 import Link from 'next/link';
 import CardStaff from '@/components/cards/CardsStuff';
 import useGetUsers from '@/hooks/useGetUsers';
+import Footer from '@/components/fragments/footer/Footer';
+import Loading from '../loading';
+import { useState } from 'react';
 
 export default function AboutPage() {
     const { staffs, images } = useGetUsers();
-
+    const [loading, setLoading] = useState(false);
+    if (loading) return <Loading />;
     return (
         <div>
             <BreadCrumbs />
@@ -63,6 +67,7 @@ export default function AboutPage() {
                     ))}
                 </div>
             </section>
+            <Footer />
         </div>
     );
 }
