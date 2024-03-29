@@ -1,25 +1,18 @@
-import ValueAbout from '@/components/elements/valueAbout';
 import BreadCrumbs from '@/components/breadcrumbs';
 import GradingAbout from '@/components/about/GradingAbout';
 import Carousel from '@/components/carousel/Carousel';
 import MainAbout from '@/components/about/MainAbout';
+import IntroSecAbout from '@/components/fragments/about/IntroSectAbout';
+import SocialMedia from '@/components/elements/SocialMedia';
+import Button from '@/components/button';
 import Link from 'next/link';
-import SectionAbout from '@/components/about/SectionAbout';
 
 export default function AboutPage() {
     const images = [
-        {
-            src: '/images/about1.jpg',
-            alt: 'about1',
-        },
-        {
-            src: '/images/about2.jpg',
-            alt: 'about2',
-        },
-        {
-            src: '/images/about3.jpg',
-            alt: 'about3',
-        },
+        'https://th.bing.com/th/id/OIG3.ntNqNnFmRtN4T2WRW83b?pid=ImgGn',
+        'https://th.bing.com/th/id/OIG3.ntNqNnFmRtN4T2WRW83b?pid=ImgGn',
+        'https://th.bing.com/th/id/OIG3.ntNqNnFmRtN4T2WRW83b?pid=ImgGn',
+        'https://th.bing.com/th/id/OIG3.ntNqNnFmRtN4T2WRW83b?pid=ImgGn',
     ];
     return (
         <div>
@@ -47,69 +40,229 @@ export default function AboutPage() {
                 <Carousel images={images} />
             </section>
 
-            <SectionAbout>
-                <SectionAbout.DetailScreen
-                    title="Since 1998"
-                    button={'Learn More →'}
-                    color="text-[#269faa]"
-                >
-                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(38,159,170,0.6)] p-4 rounded-bl-none text-white rounded-3xl">
+            <IntroSecAbout />
+            <section>
+                <div className="w-2/3 mx-auto rounded-full p-10 items-center justify-center text-center bg-[rgb(241,187,8,0.5)]">
+                    <h1 className="text-3xl font-bold">
+                        !Professional{' '}
+                        <span className="text-[#269faa] font-['ZCOOL_KuaiLe']">
+                            Kitchen
+                        </span>
+                    </h1>
+                    <p className="my-5 w-1/2 mx-auto text-lg font-thin">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea quam eveniet odit fugiat eum, reiciendis at
-                        architecto voluptatum ipsum voluptate exercitationem
-                        quisquam dolorum explicabo veniam? Doloribus placeat ex
-                        provident perferendis!
+                        Aspernatur-laborum maiores? Voluptates adipisci ad,
+                        explicabo nesciunt quibusdam qui pariatur officiis
+                        tempora dolorem dolor distinctio harum!
                     </p>
-                </SectionAbout.DetailScreen>
-                <SectionAbout.ImageScreen
-                    image={
-                        'https://th.bing.com/th/id/OIG2.o3j.NwcVMka_QG9JbSug?w=1024&h=1024&rs=1&pid=ImgDetMain'
-                    }
-                    radius={'rounded-br-none'}
-                />
-            </SectionAbout>
-            <SectionAbout>
-                <SectionAbout.ImageScreen
-                    image={
-                        'https://th.bing.com/th/id/OIG2.WTwTedic7.qfoPw07Fla?pid=ImgGn'
-                    }
-                    radius={'rounded-bl-none'}
-                />
-                <SectionAbout.DetailScreen
-                    title="Best Quality Ever"
-                    color={'text-[#cc3c27]'}
-                    button={'Order Now ↓'}
-                >
-                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(204,60,39,0.6)] p-4 rounded-br-none text-white rounded-3xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea quam eveniet odit fugiat eum, reiciendis at
-                        architecto voluptatum ipsum voluptate exercitationem
-                        quisquam dolorum explicabo veniam? Doloribus placeat ex
-                        provident perferendis!
-                    </p>
-                </SectionAbout.DetailScreen>
-            </SectionAbout>
-            <SectionAbout>
-                <SectionAbout.DetailScreen
-                    title="Comfortable Place's"
-                    color={'text-[#eab308]'}
-                    button={'Order Now ↓'}
-                >
-                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(234,179,8,0.6)] p-4 rounded-br-none text-white rounded-3xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea quam eveniet odit fugiat eum, reiciendis at
-                        architecto voluptatum ipsum voluptate exercitationem
-                        quisquam dolorum explicabo veniam? Doloribus placeat ex
-                        provident perferendis!
-                    </p>
-                </SectionAbout.DetailScreen>
-                <SectionAbout.ImageScreen
-                    image={
-                        'https://th.bing.com/th/id/OIG2.WTwTedic7.qfoPw07Fla?pid=ImgGn'
-                    }
-                    radius={'rounded-bl-none'}
-                />
-            </SectionAbout>
+                    <div className="flex space-x-5 justify-center">
+                        <Button>Join</Button>
+                        <Button>Contact</Button>
+                    </div>
+                </div>
+                <div className="w-full p-10 justify-around flex flex-row flex-wrap">
+                    <div className="w-1/4 m-5 bg-[rgba(0,0,0,0.1)] justify-center items-center text-center p-8">
+                        <div>
+                            <img
+                                className="w-full"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJF-rQg7Q_fq_T8tFh7hvJoc5IEzPp4l7fklX2KqCfQ&s"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-5 space-y-3">
+                            <h1 className="font-bold text-2xl">
+                                Jono Pamungkas
+                            </h1>
+                            <p className="text-xl font-semibold">
+                                Professional Chef
+                            </p>
+                            <p className="text-xl font-thin ">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corporis, officiis?
+                            </p>
+                        </div>
+                        <div>
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="w-1/4 m-5 bg-[rgba(0,0,0,0.1)] justify-center items-center text-center p-8">
+                        <div>
+                            <img
+                                className="w-full"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJF-rQg7Q_fq_T8tFh7hvJoc5IEzPp4l7fklX2KqCfQ&s"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-5 space-y-3">
+                            <h1 className="font-bold text-2xl">
+                                Jono Pamungkas
+                            </h1>
+                            <p className="text-xl font-semibold">
+                                Professional Chef
+                            </p>
+                            <p className="text-xl font-thin ">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corporis, officiis?
+                            </p>
+                        </div>
+                        <div>
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="w-1/4 m-5 bg-[rgba(0,0,0,0.1)] justify-center items-center text-center p-8">
+                        <div>
+                            <img
+                                className="w-full"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJF-rQg7Q_fq_T8tFh7hvJoc5IEzPp4l7fklX2KqCfQ&s"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-5 space-y-3">
+                            <h1 className="font-bold text-2xl">
+                                Jono Pamungkas
+                            </h1>
+                            <p className="text-xl font-semibold">
+                                Professional Chef
+                            </p>
+                            <p className="text-xl font-thin ">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corporis, officiis?
+                            </p>
+                        </div>
+                        <div>
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="w-1/4 m-5 bg-[rgba(0,0,0,0.1)] justify-center items-center text-center p-8">
+                        <div>
+                            <img
+                                className="w-full"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJF-rQg7Q_fq_T8tFh7hvJoc5IEzPp4l7fklX2KqCfQ&s"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-5 space-y-3">
+                            <h1 className="font-bold text-2xl">
+                                Jono Pamungkas
+                            </h1>
+                            <p className="text-xl font-semibold">
+                                Professional Chef
+                            </p>
+                            <p className="text-xl font-thin ">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corporis, officiis?
+                            </p>
+                        </div>
+                        <div>
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="w-1/4 m-5 bg-[rgba(0,0,0,0.1)] justify-center items-center text-center p-8">
+                        <div>
+                            <img
+                                className="w-full"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDJF-rQg7Q_fq_T8tFh7hvJoc5IEzPp4l7fklX2KqCfQ&s"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-5 space-y-3">
+                            <h1 className="font-bold text-2xl">
+                                Jono Pamungkas
+                            </h1>
+                            <p className="text-xl font-semibold">
+                                Professional Chef
+                            </p>
+                            <p className="text-xl font-thin ">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corporis, officiis?
+                            </p>
+                        </div>
+                        <div>
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
