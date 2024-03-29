@@ -46,10 +46,13 @@ export default function AboutPage() {
             <section className="mt-10">
                 <Carousel images={images} />
             </section>
-            <section className="flex p-2 mt-10 justify-around">
-                <SectionAbout title={'Since 1996'}
-                    image={"https://th.bing.com/th/id/OIG2.o3j.NwcVMka_QG9JbSug?w=1024&h=1024&rs=1&pid=ImgDetMain"}
-                    button={'Read More →'}>
+
+            <SectionAbout>
+                <SectionAbout.DetailScreen
+                    title="Since 1998"
+                    button={'Learn More →'}
+                    color="text-[#269faa]"
+                >
                     <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(38,159,170,0.6)] p-4 rounded-bl-none text-white rounded-3xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Ea quam eveniet odit fugiat eum, reiciendis at
@@ -57,8 +60,56 @@ export default function AboutPage() {
                         quisquam dolorum explicabo veniam? Doloribus placeat ex
                         provident perferendis!
                     </p>
-                </SectionAbout>
-            </section>
+                </SectionAbout.DetailScreen>
+                <SectionAbout.ImageScreen
+                    image={
+                        'https://th.bing.com/th/id/OIG2.o3j.NwcVMka_QG9JbSug?w=1024&h=1024&rs=1&pid=ImgDetMain'
+                    }
+                    radius={'rounded-br-none'}
+                />
+            </SectionAbout>
+            <SectionAbout>
+                <SectionAbout.ImageScreen
+                    image={
+                        'https://th.bing.com/th/id/OIG2.WTwTedic7.qfoPw07Fla?pid=ImgGn'
+                    }
+                    radius={'rounded-bl-none'}
+                />
+                <SectionAbout.DetailScreen
+                    title="Best Quality Ever"
+                    color={'text-[#cc3c27]'}
+                    button={'Order Now ↓'}
+                >
+                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(204,60,39,0.6)] p-4 rounded-br-none text-white rounded-3xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ea quam eveniet odit fugiat eum, reiciendis at
+                        architecto voluptatum ipsum voluptate exercitationem
+                        quisquam dolorum explicabo veniam? Doloribus placeat ex
+                        provident perferendis!
+                    </p>
+                </SectionAbout.DetailScreen>
+            </SectionAbout>
+            <SectionAbout>
+                <SectionAbout.DetailScreen
+                    title="Comfortable Place's"
+                    color={'text-[#eab308]'}
+                    button={'Order Now ↓'}
+                >
+                    <p className="mt-5 text-xl leading-10 font-thin bg-[rgba(234,179,8,0.6)] p-4 rounded-br-none text-white rounded-3xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ea quam eveniet odit fugiat eum, reiciendis at
+                        architecto voluptatum ipsum voluptate exercitationem
+                        quisquam dolorum explicabo veniam? Doloribus placeat ex
+                        provident perferendis!
+                    </p>
+                </SectionAbout.DetailScreen>
+                <SectionAbout.ImageScreen
+                    image={
+                        'https://th.bing.com/th/id/OIG2.WTwTedic7.qfoPw07Fla?pid=ImgGn'
+                    }
+                    radius={'rounded-bl-none'}
+                />
+            </SectionAbout>
         </div>
     );
 }

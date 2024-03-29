@@ -1,10 +1,16 @@
 import Link from 'next/link';
 
-export default function SectionAbout({ children, title, image, button }) {
+export default function SectionAbout({ children }) {
+    return (
+        <section className="flex p-2 my-16 justify-around">{children}</section>
+    );
+}
+
+const DetailScreen = ({ title, children, button, pot, color }) => {
     return (
         <>
-            <div className="flex flex-col text-end w-1/4 justify-center">
-                <h1 className="text-4xl font-bold text-[#269faa] inline">
+            <div className={`flex flex-col ${pot} w-1/4 justify-center`}>
+                <h1 className={`text-4xl ${color} font-bold  inline`}>
                     {title}
                 </h1>
                 {children}
@@ -12,13 +18,21 @@ export default function SectionAbout({ children, title, image, button }) {
                     {button}
                 </Link>
             </div>
-            <div className=" w-1/2">
-                <img
-                    className="rounded-full rounded-br-none bg-center relative"
-                    src={image}
-                    alt=""
-                />
-            </div>
         </>
     );
-}
+};
+
+const ImageScreen = ({ image, radius }) => {
+    return (
+        <div className=" w-1/2">
+            <img
+                className={`rounded-full ${radius} bg-center relative`}
+                src={image}
+                alt=""
+            />
+        </div>
+    );
+};
+
+SectionAbout.DetailScreen = DetailScreen;
+SectionAbout.ImageScreen = ImageScreen;
