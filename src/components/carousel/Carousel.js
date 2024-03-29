@@ -38,12 +38,12 @@ export default function Carousel({ images }) {
                     {images.map((image, index) => {
                         if (index === currentSlide) {
                             return (
-                                <Image
+                                <img
                                     key={image.id}
-                                    image={image}
+                                    src={image}
                                     layout="fill"
                                     objectFit="contain"
-                                    className="animate-fadeIn"
+                                    className="animate-fadeIn  w-full h-full object-cover"
                                 />
                             );
                         }
