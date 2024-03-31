@@ -1,6 +1,6 @@
 export default function PromoDisc() {
     return (
-        <div className="bg-gradient-to-b from-[#eab308] via-[#3a9182] to-[#eab308] relative my-[70px] rounded-tl-[300px] rounded-bl-[300px] w-full h-[250px]  text-white">
+        <div className="bg-gradient-to-b from-[#eab308] via-[#3a9182] to-[#eab308] relative my-[20px] rounded-tl-[300px] rounded-bl-[300px] w-full h-[250px]  text-white">
             <div className="flex justify-center items-center h-full">
                 <div className="text-center">
                     <h1 className="text-6xl font-bold font-['tourney']">

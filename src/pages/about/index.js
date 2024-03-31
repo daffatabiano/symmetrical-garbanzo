@@ -18,7 +18,7 @@ export default function AboutPage() {
     if (loading) return <Loading />;
     return (
         <div>
-            <BreadCrumbs />
+            <BreadCrumbs path={'/about'} direction={'About'} />
             <header className="text-center w-full my-10">
                 <h1 className="text-6xl font-bold inline">
                     <span className="text-[#269faa] font-['ZCOOL_KuaiLe']">
@@ -63,7 +63,25 @@ export default function AboutPage() {
                             name={staff.name}
                             profession={staff.profession}
                             description={staff.description}
-                        />
+                        >
+                            <ul className="flex justify-between items-center">
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Facebook width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.Instagram width={'w-10'} />
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>
+                                        <SocialMedia.LinkedIn width={'w-10'} />
+                                    </Link>
+                                </li>
+                            </ul>
+                        </CardStaff>
                     ))}
                 </div>
             </section>

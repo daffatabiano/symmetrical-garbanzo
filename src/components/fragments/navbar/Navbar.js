@@ -45,7 +45,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                         <a
-                            href=""
+                            href={'/menu'}
                             className="hover:underline underline-offset-8"
                         >
                             Menu

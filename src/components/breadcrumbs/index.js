@@ -1,4 +1,4 @@
-export default function BreadCrumbs() {
+export default function BreadCrumbs({ path, direction }) {
     return (
         <nav className="flex py-3 px-5 absolute z-10" aria-label="Breadcrumb">
             <ol className=" inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -28,10 +28,10 @@ export default function BreadCrumbs() {
                             />
                         </svg>
                         <a
-                            href="#"
+                            href={path}
                             className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-[#269faa]"
                         >
-                            About
+                            {direction}
                         </a>
                     </div>
                 </li>
